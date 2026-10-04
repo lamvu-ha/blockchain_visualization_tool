@@ -1,4 +1,5 @@
 import { AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig } from 'remotion';
+import { Person } from './Person';
 
 const Block = ({ index }) => {
   const frame = useCurrentFrame();
@@ -48,7 +49,8 @@ export const BlockchainIntro = ({ title, blockCount }) => {
       <h1 style={{ color: 'white', fontSize: 110, fontFamily: 'sans-serif', margin: 0, opacity: titleOpacity }}>
         {title}
       </h1>
-      <div style={{ display: 'flex', gap: 40 }}>
+      <div style={{ display: 'flex', gap: 40, alignItems: 'center' }}>
+        <Person />
         {Array.from({ length: blockCount }, (_, i) => (
           <Block key={i} index={i} />
         ))}
