@@ -8,7 +8,10 @@
     "build": "vite build",
     "preview": "vite preview",
     "server": "node server.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "remotion:studio": "remotion studio",
+    "remotion:render": "remotion render BlockchainIntro out/blockchain-intro.mp4",
+    "remotion:still": "remotion still BlockchainIntro out/blockchain-intro.png --frame=90"
   },
   "keywords": [
     "blockchain",
@@ -17,6 +20,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@remotion/cli": "4.0.532",
+    "@remotion/player": "4.0.532",
     "@vitejs/plugin-react": "^4.2.1",
     "bcryptjs": "^3.0.3",
     "html2canvas": "^1.4.1",
@@ -27,6 +32,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-zoom-pan-pinch": "^3.7.0",
+    "remotion": "4.0.532",
     "vite": "^5.2.0"
   },
   "devDependencies": {
